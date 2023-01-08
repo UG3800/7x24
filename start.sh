@@ -1,12 +1,6 @@
 #!/bin/bash
 PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
 export PATH
-#=================================================================#
-#   System Required: CentOS7 X86_64                               #
-#   Description: FFmpeg Stream Media Server                       #
-#   Author: LALA                                    #
-#   Website: https://www.lala.im                                  #
-#=================================================================#
 
 # 颜色选择
 red='\033[0;31m'
