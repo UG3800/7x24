@@ -26,5 +26,5 @@ screen -X -s 进程名 quit
 ```
 执行FF_Live：
 ```
-bash <(curl -Ls https://raw.githubusercontent.com/UG3800/7x24-/main/start.sh)
+bash <(curl -Ls https://raw.githubusercontent.com/UG3800/7x24/main/start.sh)
 ```
