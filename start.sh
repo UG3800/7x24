@@ -64,15 +64,17 @@ then
 	do
 		cd $folder
 		video=$(find ./ -type f | shuf -n 1)
-        ffmpeg -re -i "$video" -preset ultrafast -vcodec libx264 -g 60 -b:v 5000k -c:a aac -b:a 192k -strict -2 -f flv ${rtmp}
+    ffmpeg -re -i "$video" -preset ultrafast -vcodec libx264 -g 60 -b:v 7000k -c:a aac -b:a 192k -strict -2 -f flv ${rtmp}
     done
 fi
-    }
+ }
+    
 # 停止推流
 stream_stop(){
 	screen -S stream -X quit
 	killall ffmpeg
 	}
+
 # 开始菜单设置
 echo -e "${yellow} CentOS7 X86_64 FFmpeg无人值守循环推流 For LALA.IM ${font}"
 echo -e "${red} 请确定此脚本目前是在screen窗口内运行的! ${font}"
@@ -96,5 +98,6 @@ start_menu(){
         ;;
     esac
 	}
+
 # 运行开始菜单
 start_menu
