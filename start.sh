@@ -64,7 +64,7 @@ then
 	do
 		cd $folder
 		video=$(find ./ -type f | shuf -n 1)
-  	ffmpeg -re -i "$video" -preset ultrafast -vcodec libx264 -g 60 -b:v 3000k -c:a aac -b:a 128k -strict -2 -f flv ${rtmp}
+  	ffmpeg -re -i "$video" -preset ultrafast -vcodec libx264 -g 60 -b:v 7000k -c:a aac -b:a 192k -strict -2 -f flv ${rtmp}
  	done
 fi
  }
