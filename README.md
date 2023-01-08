@@ -10,7 +10,7 @@ yum -y install screen
 ```
 开个新窗口：
 ```
-screen -S ytb
+screen -S 进程名
 ```
 查看进程：
 ```
