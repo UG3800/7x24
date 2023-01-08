@@ -3,11 +3,13 @@ ffmpeg实现24小时不间断推流
 
 需要配合screen运行：
 ```
+ctrl+A+D
+```
 yum -y install screen
 ```
 开个新窗口：
 ```
-screen -S stream
+screen -S ytb
 ```
 查看进程：
 ```
