@@ -33,10 +33,10 @@ read -p "输入你的推流地址和推流码(rtmp协议):" rtmp
 if [[ $rtmp =~ "rtmp://" ]];then
 	echo -e "${green} 推流地址输入正确,程序将进行下一步操作. ${font}"
   	sleep 2
-	else
+	else  
   	echo -e "${red} 你输入的地址不合法,请重新运行程序并输入! ${font}"
   	exit 1
-fi
+fi 
 
 # 定义视频存放目录
 read -p "输入你的视频存放目录 (格式仅支持mp4,并且要绝对路径,例如/opt/video):" folder
@@ -64,11 +64,11 @@ then
 	do
 		cd $folder
 		video=$(find ./ -type f | shuf -n 1)
-    ffmpeg -re -i "$video" -preset ultrafast -vcodec libx264 -g 60 -b:v 5000k -c:a aac -b:a 192k -strict -2 -f flv ${rtmp}
-    done
+  	ffmpeg -re -i "$video" -preset ultrafast -vcodec libx264 -g 60 -b:v 3000k -c:a aac -b:a 128k -strict -2 -f flv ${rtmp}
+ 	done
 fi
  }
-    
+
 # 停止推流
 stream_stop(){
 	screen -S stream -X quit
